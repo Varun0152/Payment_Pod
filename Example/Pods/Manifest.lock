@@ -1,0 +1,104 @@
+PODS:
+  - Alamofire (4.9.1)
+  - CardIO (5.4.1)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - KeychainSwift (24.0.0)
+  - lottie-ios (4.5.0)
+  - MyPodLibrary (0.1.1):
+    - Alamofire (~> 4.9.1)
+    - KeychainSwift
+    - lottie-ios
+    - PayPal-iOS-SDK
+    - PayPalCheckout
+    - razorpay-pod
+    - Stripe
+    - StripePaymentSheet
+    - StripeTerminal
+  - PayPal-iOS-SDK (2.18.1):
+    - PayPal-iOS-SDK/CardIO (= 2.18.1)
+    - PayPal-iOS-SDK/Core (= 2.18.1)
+  - PayPal-iOS-SDK/CardIO (2.18.1):
+    - CardIO (~> 5.4.1)
+  - PayPal-iOS-SDK/Core (2.18.1)
+  - PayPalCheckout (1.3.0)
+  - razorpay-pod (1.3.11)
+  - Stripe (23.31.0):
+    - StripeApplePay (= 23.31.0)
+    - StripeCore (= 23.31.0)
+    - StripePayments (= 23.31.0)
+    - StripePaymentsUI (= 23.31.0)
+    - StripeUICore (= 23.31.0)
+  - StripeApplePay (23.31.0):
+    - StripeCore (= 23.31.0)
+  - StripeCore (23.31.0)
+  - StripePayments (23.31.0):
+    - StripeCore (= 23.31.0)
+    - StripePayments/Stripe3DS2 (= 23.31.0)
+  - StripePayments/Stripe3DS2 (23.31.0):
+    - StripeCore (= 23.31.0)
+  - StripePaymentSheet (23.31.0):
+    - StripeApplePay (= 23.31.0)
+    - StripeCore (= 23.31.0)
+    - StripePayments (= 23.31.0)
+    - StripePaymentsUI (= 23.31.0)
+  - StripePaymentsUI (23.31.0):
+    - StripeCore (= 23.31.0)
+    - StripePayments (= 23.31.0)
+    - StripeUICore (= 23.31.0)
+  - StripeTerminal (3.9.1)
+  - StripeUICore (23.31.0):
+    - StripeCore (= 23.31.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase (~> 2.1.4)
+  - MyPodLibrary (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CardIO
+    - FBSnapshotTestCase
+    - KeychainSwift
+    - lottie-ios
+    - PayPal-iOS-SDK
+    - PayPalCheckout
+    - razorpay-pod
+    - Stripe
+    - StripeApplePay
+    - StripeCore
+    - StripePayments
+    - StripePaymentSheet
+    - StripePaymentsUI
+    - StripeTerminal
+    - StripeUICore
+
+EXTERNAL SOURCES:
+  MyPodLibrary:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  KeychainSwift: 007c4647486e4563adca839cf02cef00deb3b670
+  lottie-ios: a881093fab623c467d3bce374367755c272bdd59
+  MyPodLibrary: 09915b85e12c6349ffc43f7dce99e5a1a96fc7d1
+  PayPal-iOS-SDK: 70d56697aef502c130b9840e31dea5c6b8a350e1
+  PayPalCheckout: 06cb1e4f5bfdca33b8eb6052d04ac4e4a4ab512c
+  razorpay-pod: 5e7914fbfb78d09a2810791e2de44ee4d696cb3a
+  Stripe: ffee8dd310175127160dae40ff2e7817dee678ab
+  StripeApplePay: be64400109f077ef36e738381f929c201ec95db3
+  StripeCore: 9569fe72d9fb85d11584a5ee1aed6319f7afb6a7
+  StripePayments: c6111efa3a8c419bcfa6fb6c0ff4e4354972821d
+  StripePaymentSheet: 5e1fced1a34635739692eafbd532cd6446763001
+  StripePaymentsUI: 37fd38e33ddb3a7f45ab842cc5ffc863d0ca783b
+  StripeTerminal: f7f5e176979224ed76edb3724f41138fbb28053c
+  StripeUICore: c77f2078ef554e97b582d80a1da73302c0a9c806
+
+PODFILE CHECKSUM: d6ad5264bf8dc1e75dfaa49e5ececbb1a21ebbca
+
+COCOAPODS: 1.15.2

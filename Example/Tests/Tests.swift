@@ -1,5 +1,5 @@
 import XCTest
-import MyPodLibrary
+//import MyPodLibrary
 
 class Tests: XCTestCase {
     

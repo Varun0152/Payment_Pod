@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DirectUPILoadingController" customModule="Astrotalk" customModuleProvider="target">
+            <connections>
+                <outlet property="lottieContainerView" destination="z5j-F6-FuR" id="1pN-Mg-JvM"/>
+                <outlet property="primaryLabel" destination="n18-od-S1e" id="8T9-Ro-Emg"/>
+                <outlet property="secondaryLabel" destination="yhR-eq-VOv" id="Zgx-La-ue0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qx4-BP-QOb">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5P-ee-2wr">
+                            <rect key="frame" x="15" y="10" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="Bfu-Ep-5eX"/>
+                                <constraint firstAttribute="width" constant="35" id="edt-xP-MkI"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="FilterCross"/>
+                            <connections>
+                                <action selector="crossButtonAction:" destination="-1" eventType="touchUpInside" id="ahs-QU-9q8"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z5j-F6-FuR">
+                            <rect key="frame" x="96.666666666666686" y="179.66666666666663" width="200" height="200"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="200" id="F5g-Pz-ldm"/>
+                                <constraint firstAttribute="width" constant="200" id="zvU-oP-lQg"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="paymentSuccess"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="X8O-fr-SWp">
+                            <rect key="frame" x="10" y="389.66666666666669" width="373" height="58"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hold On!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n18-od-S1e">
+                                    <rect key="frame" x="0.0" y="0.0" width="373" height="28.666666666666668"/>
+                                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="21"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checking the payment status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhR-eq-VOv">
+                                    <rect key="frame" x="0.0" y="38.666666666666629" width="373" height="19.333333333333329"/>
+                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="T5P-ee-2wr" firstAttribute="top" secondItem="Qx4-BP-QOb" secondAttribute="top" constant="10" id="1Pw-Ui-eJz"/>
+                        <constraint firstItem="X8O-fr-SWp" firstAttribute="leading" secondItem="Qx4-BP-QOb" secondAttribute="leading" constant="10" id="Fey-mZ-mtH"/>
+                        <constraint firstItem="z5j-F6-FuR" firstAttribute="centerY" secondItem="Qx4-BP-QOb" secondAttribute="centerY" constant="-100" id="NUj-eu-pTI"/>
+                        <constraint firstItem="T5P-ee-2wr" firstAttribute="leading" secondItem="Qx4-BP-QOb" secondAttribute="leading" constant="15" id="PGa-iM-duQ"/>
+                        <constraint firstItem="X8O-fr-SWp" firstAttribute="top" secondItem="z5j-F6-FuR" secondAttribute="bottom" constant="10" id="Sqh-Xe-ry1"/>
+                        <constraint firstAttribute="trailing" secondItem="X8O-fr-SWp" secondAttribute="trailing" constant="10" id="fRy-dy-YdH"/>
+                        <constraint firstItem="z5j-F6-FuR" firstAttribute="centerX" secondItem="Qx4-BP-QOb" secondAttribute="centerX" id="v1s-h7-hfD"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="X8O-fr-SWp" secondAttribute="bottom" constant="10" id="zoJ-Tu-7cU"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Qx4-BP-QOb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Irp-XV-Wwo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Qx4-BP-QOb" secondAttribute="bottom" id="Kiw-Mr-fnh"/>
+                <constraint firstItem="Qx4-BP-QOb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ux2-Tp-fJl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Qx4-BP-QOb" secondAttribute="trailing" id="ZOk-lY-C4R"/>
+            </constraints>
+            <point key="canvasLocation" x="-77" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="FilterCross" width="15" height="15"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

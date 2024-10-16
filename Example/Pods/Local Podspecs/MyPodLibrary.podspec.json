@@ -1,0 +1,62 @@
+{
+  "name": "MyPodLibrary",
+  "version": "0.1.1",
+  "summary": "A short description of MyPodLibrary.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Varun0152/MyPodLibrary",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Varun0152": "varun.bagga@astrotalk.com"
+  },
+  "source": {
+    "git": "https://github.com/Varun0152/MyPodLibrary.git",
+    "tag": "0.1.1"
+  },
+  "platforms": {
+    "ios": "13.0"
+  },
+  "requires_arc": true,
+  "source_files": [
+    "MyPodLibrary/Classes/**/*",
+    "PaymentManager/**/*",
+    "Models/**/*",
+    "NetworkManager/**/*",
+    "Extensions/**/*",
+    "Helpers/**/*",
+    "Payoneer/**/*",
+    "Payu/**/*"
+  ],
+  "static_framework": true,
+  "dependencies": {
+    "PayPal-iOS-SDK": [
+
+    ],
+    "razorpay-pod": [
+
+    ],
+    "PayPalCheckout": [
+
+    ],
+    "StripeTerminal": [
+
+    ],
+    "StripePaymentSheet": [
+
+    ],
+    "Stripe": [
+
+    ],
+    "Alamofire": [
+      "~> 4.9.1"
+    ],
+    "lottie-ios": [
+
+    ],
+    "KeychainSwift": [
+
+    ]
+  }
+}
