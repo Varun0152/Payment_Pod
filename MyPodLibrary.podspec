@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MyPodLibrary'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A short description of MyPodLibrary.'
 
 # This description is used to generate tags and improve search results.
@@ -28,10 +28,11 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/Varun0152/MyPodLibrary.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
-
-  s.source_files = 'MyPodLibrary/Classes/**/*'
+  s.ios.deployment_target = '13.0'
+  s.requires_arc = true  # Ensure ARC is enabled
+  s.source_files = 'MyPodLibrary/Classes/**/*', 'PaymentManager/**/*', 'Models/**/*', 'NetworkManager/**/*', 'Extensions/**/*', 'Helpers/**/*', 'Payoneer/**/*', 'Payu/**/*'
   
+
   # s.resource_bundles = {
   #   'MyPodLibrary' => ['MyPodLibrary/Assets/*.png']
   # }
@@ -39,4 +40,14 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  s.static_framework = true
+  s.dependency 'PayPal-iOS-SDK'
+  s.dependency 'razorpay-pod'
+  s.dependency 'PayPalCheckout'
+  s.dependency 'StripeTerminal'
+  s.dependency 'StripePaymentSheet'
+  s.dependency 'Stripe'
+  s.dependency 'Alamofire', '~> 4.9.1'
+  s.dependency 'lottie-ios'
+  s.dependency 'KeychainSwift'
 end

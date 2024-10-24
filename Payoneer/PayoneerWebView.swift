@@ -36,7 +36,7 @@ class PayoneerWebView: UIViewController {
         super.viewDidLoad()
         wkWebView.navigationDelegate = self
         self.title = "Payoneer Payment"
-        MyLoader.showLoading(self.view)
+//        MyLoader.showLoading(self.view)
         self.openPayuPaymentGetway()
     }
     
@@ -44,7 +44,7 @@ class PayoneerWebView: UIViewController {
         if let request = viewModel.getPayoneerWebViewUrlRequest() {
             self.wkWebView.load(request)
             self.navigationItem.setHidesBackButton(true, animated: false)
-            MyLoader.hideLoading(self.view)
+//            MyLoader.hideLoading(self.view)
         }
     }
 

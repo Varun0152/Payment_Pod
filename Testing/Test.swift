@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+
+public class helper {
+    public init(){}
+}

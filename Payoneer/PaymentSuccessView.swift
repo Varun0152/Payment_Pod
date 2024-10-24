@@ -21,9 +21,9 @@ class PaymentSuccessView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "PAYMENT\nSUCCESSFUL"
         label.textAlignment = .center
-        label.textColor = kGreenColorText
+        label.textColor = .green
         label.numberOfLines = 2
-        label.font = UIFont(name:K_Poppins_Semibold, size: 30.0)
+        label.font = UIFont(name:"Poppins-Medium", size: 30.0)
         self.addSubview(label)
         label.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         label.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true

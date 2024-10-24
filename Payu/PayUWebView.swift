@@ -23,8 +23,8 @@ protocol WalletPayuDelegate {
     func isPaymentSusscess()
 
 }
-class PayUWebView: UIViewController,WKNavigationDelegate,WKUIDelegate{
-    @IBOutlet weak var wkWebView: WKWebView!
+public class PayUWebView: UIViewController,WKNavigationDelegate,WKUIDelegate{
+    @IBOutlet weak var wkWebView: WKWebView?
     weak var delegate : WalletPaymentProtocol?
     weak var GoldDelegate: AstroTalkGoldProtocol?
     var payuData = [String:String]()
@@ -36,20 +36,31 @@ class PayUWebView: UIViewController,WKNavigationDelegate,WKUIDelegate{
     var astromallDelegate : AstromallPayuDelegate?
     var walletDelegate : WalletPayuDelegate?
     var chatVcDelegate : ChatVcPayuDelegate?
+    
+    public init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         self.openPayuPaymentGetway()
         self.title = "Payu Payment"
-        self.wkWebView.navigationDelegate = self
+        self.wkWebView?.navigationDelegate = self
         self.navigationBar_ButtonIcon()
 
     }
+    
     func navigationBar_ButtonIcon() {
         let btnback = self.barButton(image: "NewBackIcon")
         btnback.addTarget(self, action: #selector(self.backPressed(button:)), for: .touchUpInside)
         self.navigationItem.leftBarButtonItems = [UIBarButtonItem.init(customView: btnback)]
     }
+    
     @objc func backPressed(button: UIButton) -> Void {
         self.navigationController?.popViewController(animated: true)
         astromallDelegate?.isPaymentFail()
@@ -57,6 +68,25 @@ class PayUWebView: UIViewController,WKNavigationDelegate,WKUIDelegate{
         chatVcDelegate?.isPaymentFail()
 
      }
+    
+    func barButton(image:String) -> UIButton {
+        let button = UIButton(type: .custom)
+        button.setTitleColor(.black, for: .normal)
+        button.setImage(UIImage(named:image), for: .normal)
+        button.frame = CGRect(x: 0, y: 0, width: 35, height: 35)
+//        button.widthAnchor.constraint(equalToConstant: 35).isActive = true
+//        button.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        if image.isEmpty == true {
+            button.backgroundColor = kPrimaryColor
+        }
+        button.contentMode = .left
+        button.layer.cornerRadius = button.frame.size.width/2
+        button.clipsToBounds = true
+        button.titleLabel?.adjustsFontSizeToFitWidth = true
+        button.titleLabel?.font =  UIFont(name: "Poppins-Medium", size: 15)
+        return button
+    }
+    
     func openPayuPaymentGetway()  {
         self.payuData["key"] = k_PayuKey
         if let url = URL(string:k_PayuURL) {
@@ -67,8 +97,8 @@ class PayUWebView: UIViewController,WKNavigationDelegate,WKUIDelegate{
         let postString = self.getPostString(params: self.payuData)
         print (postString )
             request.httpBody = postString.data(using: .utf8)
-        self.wkWebView.load(request)
-        MyLoader.hideLoading(self.view)
+        self.wkWebView?.load(request)
+//        MyLoader.hideLoading(self.view)
         }
     }
     //helper method to build url form request
@@ -93,7 +123,7 @@ class PayUWebView: UIViewController,WKNavigationDelegate,WKUIDelegate{
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         if let urlStr = navigationAction.request.url?.absoluteString {
             //urlStr is what you want
-            printLog(log: urlStr)
+//            printLog(log: urlStr)
             if urlStr.contains("https://astrotalk.com/payment-success") {
                 if self.productOrderId.isEmpty != true {
 //                    let webpageURL = URL(string: urlStr)
@@ -145,13 +175,14 @@ class PayUWebView: UIViewController,WKNavigationDelegate,WKUIDelegate{
                       self.delegate?.sendDataToEventList(eventId: self.eventId,position: self.postionFromEventList)
                       self.navigationController?.popViewController(animated: true)
                   } else if self.controllerString == "VoIPCall"{
-                      if SharedVariables.getIsCallInProgress(){
+                      //MARK: -TO be Changed
+//                      if SharedVariables.getIsCallInProgress(){
                           self.navigationController?.popToViewController(self.controllerOBJ, animated: true)
-                      } else{
-                          let delegate = UIApplication.shared.delegate as? AppDelegate
-                          delegate?.notificationDict.removeAll()
-                          delegate?.onBoardingSucess_Home()
-                      }
+//                      } else{
+//                          let delegate = UIApplication.shared.delegate as? AppDelegate
+//                          delegate?.notificationDict.removeAll()
+//                          delegate?.onBoardingSucess_Home()
+//                      }
                   } else if self.controllerString == "AstroTalk Gold" {
                       self.GoldDelegate?.sendDataToAstroTalkGold(isFromWalletPayementVc: true)
                       //                    NotificationCenter.default.post(name: Notification.Name("AstroTalkGoldRecharge"), object: nil, userInfo: ["isRecharge": true])

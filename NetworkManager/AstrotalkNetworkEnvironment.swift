@@ -30,7 +30,7 @@ public enum NetworkEnvironment: String, CaseIterable {
     case preprod1 = "preprod1"
     case preprod2 = "preprod2"
 }
-
+ 
 public extension NetworkManager {
     static var isReleaseMode: Bool {
         #if DEV
@@ -46,8 +46,9 @@ public extension NetworkManager {
     static let userWithoutLoginId = "userWithoutLoginId"
 
 
-    static var selectedEnvironment: NetworkEnvironment {
+    public static var selectedEnvironment: NetworkEnvironment {
         get {
+            return .dev1
             guard !isReleaseMode else {
                 return .production
             }
@@ -70,6 +71,7 @@ public extension NetworkManager {
     }
     
     static var baseURL: String {
+        return "https://dev1.api.astrotalk.in/AstroTalk/"
         switch selectedEnvironment {
         case .production:
             return "https://api.prod.astrotalk.in/AstroTalk/"

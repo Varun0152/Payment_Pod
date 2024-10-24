@@ -14,6 +14,10 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		74983DC27DC3E6042DDA3FE8 /* Pods_MyPodLibrary_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B83973642E3839E866D045 /* Pods_MyPodLibrary_Tests.framework */; };
+		BF54D9172CC2869D00AC1197 /* PaymentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54D9152CC2869D00AC1197 /* PaymentListViewController.swift */; };
+		BF54D9182CC2869D00AC1197 /* PaymentListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF54D9162CC2869D00AC1197 /* PaymentListViewController.xib */; };
+		BF54D91D2CC289D800AC1197 /* PaymentListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54D91B2CC289D800AC1197 /* PaymentListCollectionViewCell.swift */; };
+		BF54D91E2CC289D800AC1197 /* PaymentListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF54D91C2CC289D800AC1197 /* PaymentListCollectionViewCell.xib */; };
 		EE0DB47A8941D4C9751CEBEF /* Pods_MyPodLibrary_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D71506C184D77BF47CF53C /* Pods_MyPodLibrary_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,8 +48,12 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		8325604ED953DE12B27EA7C3 /* Pods-MyPodLibrary_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPodLibrary_Tests.release.xcconfig"; path = "Target Support Files/Pods-MyPodLibrary_Tests/Pods-MyPodLibrary_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		BF54D9152CC2869D00AC1197 /* PaymentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentListViewController.swift; sourceTree = "<group>"; };
+		BF54D9162CC2869D00AC1197 /* PaymentListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentListViewController.xib; sourceTree = "<group>"; };
+		BF54D91B2CC289D800AC1197 /* PaymentListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentListCollectionViewCell.swift; sourceTree = "<group>"; };
+		BF54D91C2CC289D800AC1197 /* PaymentListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentListCollectionViewCell.xib; sourceTree = "<group>"; };
 		CD52C39FC6B22B383150928A /* Pods-MyPodLibrary_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPodLibrary_Example.debug.xcconfig"; path = "Target Support Files/Pods-MyPodLibrary_Example/Pods-MyPodLibrary_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		E5803FBF19734E22309E8696 /* MyPodLibrary.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MyPodLibrary.podspec; path = ../MyPodLibrary.podspec; sourceTree = "<group>"; };
+		E5803FBF19734E22309E8696 /* MyPodLibrary.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MyPodLibrary.podspec; path = ../MyPodLibrary.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EBDADACD44187435D72DC9AD /* Pods-MyPodLibrary_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPodLibrary_Example.release.xcconfig"; path = "Target Support Files/Pods-MyPodLibrary_Example/Pods-MyPodLibrary_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +116,7 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				BF54D9192CC289B000AC1197 /* PaymentView */,
 			);
 			name = "Example for MyPodLibrary";
 			path = MyPodLibrary;
@@ -146,6 +155,25 @@
 				53599F887D824E6F51AA4CB1 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		BF54D9192CC289B000AC1197 /* PaymentView */ = {
+			isa = PBXGroup;
+			children = (
+				BF54D91A2CC289BD00AC1197 /* Cell */,
+				BF54D9152CC2869D00AC1197 /* PaymentListViewController.swift */,
+				BF54D9162CC2869D00AC1197 /* PaymentListViewController.xib */,
+			);
+			path = PaymentView;
+			sourceTree = "<group>";
+		};
+		BF54D91A2CC289BD00AC1197 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BF54D91B2CC289D800AC1197 /* PaymentListCollectionViewCell.swift */,
+				BF54D91C2CC289D800AC1197 /* PaymentListCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		CE931F8698944D84A40F24D6 /* Pods */ = {
@@ -250,8 +278,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				BF54D91E2CC289D800AC1197 /* PaymentListCollectionViewCell.xib in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				BF54D9182CC2869D00AC1197 /* PaymentListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,8 +406,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF54D9172CC2869D00AC1197 /* PaymentListViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				BF54D91D2CC289D800AC1197 /* PaymentListCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -104,12 +104,17 @@ final class PayoneerFillAddressVC: UIViewController {
         countryView.barTintColor = .red
         countryView.displayLanguage = .english
         countryView.show()
-        countryView.dropShadow()
+//        countryView.dropShadow()
         countryView.selectedCountryCallBack = { (countryDic) -> Void in
             self.countryFlagImageView.image = (countryDic["countryImage"] as? UIImage)!
             self.countryTextField.text = (countryDic["en"] as? String) ?? ""
             self.viewModel.countryIsoCode = (countryDic["locale"] as? String) ?? ""
         }
+    }
+    
+    func retriveImage(dataimage:Data) -> UIImage {
+        let image = UIImage.init(data: dataimage)
+        return image!
     }
     
     //MARK: Change country code
@@ -120,7 +125,7 @@ final class PayoneerFillAddressVC: UIViewController {
         countryView.barTintColor = .red
         countryView.displayLanguage = .english
         countryView.show()
-        countryView.dropShadow()
+//        countryView.dropShadow()
         countryView.selectedCountryCallBack = { (countryDic) -> Void in
             self.phoneNoCodeImageView.image = (countryDic["countryImage"] as? UIImage)!
             self.lblCountryCode.text = "+\(countryDic["code"] as! NSNumber)"
@@ -174,5 +179,44 @@ extension PayoneerFillAddressVC: UITextFieldDelegate {
         }
         
         saveAddressButton.isActive = viewModel.shouldSaveButtonEnable
+    }
+}
+
+
+func addborderAndCorner_UIView(buttonObj:UIView,colorSelect:UIColor,width: CGFloat,cornerRadius:CGFloat){
+    buttonObj.layer.cornerRadius = cornerRadius
+    buttonObj.layer.borderWidth = width
+    buttonObj.layer.borderColor = colorSelect.cgColor
+    buttonObj.layer.masksToBounds = true
+}
+
+func hexStringToUIColor(hex:String) -> UIColor {
+    var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+    if (cString.hasPrefix("#")) {
+        cString.remove(at: cString.startIndex)
+    }
+    if ((cString.count) != 6) {
+        return UIColor.gray
+    }
+    var rgbValue:UInt32 = 0
+    Scanner(string: cString).scanHexInt32(&rgbValue)
+    return UIColor(
+        red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+        green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+        blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+        alpha: CGFloat(1.0)
+    )
+}
+
+class AstroSubmitButton: UIButton {
+    var isActive: Bool {
+        get {
+            super.isEnabled
+        }
+        set {
+            super.isEnabled = false
+            self.backgroundColor = hexStringToUIColor(hex: "F2F2F7")
+            self.setTitleColor(hexStringToUIColor(hex: "9A9A9A"), for: .normal)
+        }
     }
 }
