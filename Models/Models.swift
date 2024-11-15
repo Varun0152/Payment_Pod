@@ -26,6 +26,17 @@ public struct FallBackMethod {
     var id: Int?
     var type: String?
     var gatewayId: Int?
+    
+   public init(icon: String? = nil, viewType: String? = nil, isRecommended: Bool? = nil, methodName: String? = nil, typeId: Int? = nil, id: Int? = nil, type: String? = nil, gatewayId: Int? = nil) {
+        self.icon = icon
+        self.viewType = viewType
+        self.isRecommended = isRecommended
+        self.methodName = methodName
+        self.typeId = typeId
+        self.id = id
+        self.type = type
+        self.gatewayId = gatewayId
+    }
 }
 
 

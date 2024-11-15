@@ -450,6 +450,7 @@ public class PaymentManager {
                 }
                 return
             }
+            debugPrint(response)
             guard let response = response else { return }
             if response["status"].stringValue == "fail" {
                 print(response["reason"].stringValue)

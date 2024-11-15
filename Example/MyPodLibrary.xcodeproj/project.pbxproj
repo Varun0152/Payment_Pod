@@ -18,6 +18,8 @@
 		BF54D9182CC2869D00AC1197 /* PaymentListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF54D9162CC2869D00AC1197 /* PaymentListViewController.xib */; };
 		BF54D91D2CC289D800AC1197 /* PaymentListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54D91B2CC289D800AC1197 /* PaymentListCollectionViewCell.swift */; };
 		BF54D91E2CC289D800AC1197 /* PaymentListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF54D91C2CC289D800AC1197 /* PaymentListCollectionViewCell.xib */; };
+		BFD91C482CE72C030027D4BA /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD91C462CE72C030027D4BA /* PaymentViewController.swift */; };
+		BFD91C492CE72C030027D4BA /* PaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFD91C472CE72C030027D4BA /* PaymentViewController.xib */; };
 		EE0DB47A8941D4C9751CEBEF /* Pods_MyPodLibrary_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D71506C184D77BF47CF53C /* Pods_MyPodLibrary_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,8 @@
 		BF54D9162CC2869D00AC1197 /* PaymentListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentListViewController.xib; sourceTree = "<group>"; };
 		BF54D91B2CC289D800AC1197 /* PaymentListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentListCollectionViewCell.swift; sourceTree = "<group>"; };
 		BF54D91C2CC289D800AC1197 /* PaymentListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentListCollectionViewCell.xib; sourceTree = "<group>"; };
+		BFD91C462CE72C030027D4BA /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		BFD91C472CE72C030027D4BA /* PaymentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentViewController.xib; sourceTree = "<group>"; };
 		CD52C39FC6B22B383150928A /* Pods-MyPodLibrary_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPodLibrary_Example.debug.xcconfig"; path = "Target Support Files/Pods-MyPodLibrary_Example/Pods-MyPodLibrary_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E5803FBF19734E22309E8696 /* MyPodLibrary.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MyPodLibrary.podspec; path = ../MyPodLibrary.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EBDADACD44187435D72DC9AD /* Pods-MyPodLibrary_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPodLibrary_Example.release.xcconfig"; path = "Target Support Files/Pods-MyPodLibrary_Example/Pods-MyPodLibrary_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 				BF54D9192CC289B000AC1197 /* PaymentView */,
+				BFD91C462CE72C030027D4BA /* PaymentViewController.swift */,
+				BFD91C472CE72C030027D4BA /* PaymentViewController.xib */,
 			);
 			name = "Example for MyPodLibrary";
 			path = MyPodLibrary;
@@ -282,6 +288,7 @@
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				BF54D9182CC2869D00AC1197 /* PaymentListViewController.xib in Resources */,
+				BFD91C492CE72C030027D4BA /* PaymentViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +415,7 @@
 			files = (
 				BF54D9172CC2869D00AC1197 /* PaymentListViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				BFD91C482CE72C030027D4BA /* PaymentViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				BF54D91D2CC289D800AC1197 /* PaymentListCollectionViewCell.swift in Sources */,
 			);

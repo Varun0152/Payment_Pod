@@ -1,21 +1,21 @@
 //
-//  ViewController.swift
-//  MyPodLibrary
+//  PaymentViewController.swift
+//  MyPodLibrary_Example
 //
-//  Created by Varun0152 on 10/11/2024.
-//  Copyright (c) 2024 Varun0152. All rights reserved.
+//  Created by Varun Bagga on 15/11/24.
+//  Copyright © 2024 CocoaPods. All rights reserved.
 //
 
 import UIKit
 import MyPodLibrary
 
-class ViewController: UIViewController {
+class PaymentViewController: UIViewController {
     
-    let App_Id = "102"
-    let version = "11.2.293"
-    let userWithoutLoginId = "11771534"
-    let AuthToken = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI5MTI5OTEwNDU1IiwiYXV0aCI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJidXNpbmVzc0lkIjoxLCJhcHBJZCI6MTAyLCJyb2xlX3R5cGUiOiJST0xFX1VTRVIiLCJpZCI6NzAwMzEyOCwiaXNMaXZlIjpmYWxzZSwidHNfbnVtYmVyIjo0LCJpYXQiOjE3MjkwNjI4MTksImV4cCI6MjA0NDQyMjgxOX0.jhALPr7ycNLNHttNMRdqkc-o4LZk2bzfBT8CXViC4PM"
-    let userId = "7003128"
+    let App_Id = "2"
+    let version = "11.2.296"
+    let userWithoutLoginId = "21131330"
+    let AuthToken = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4Mzc1OTk2NDIyIiwiYXV0aCI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJidXNpbmVzc0lkIjoxLCJhcHBJZCI6Miwicm9sZV90eXBlIjoiUk9MRV9VU0VSIiwiaWQiOjcwMDM3MTMsImlzTGl2ZSI6ZmFsc2UsInRzX251bWJlciI6MTQsImlhdCI6MTczMTY2NTI0OSwiZXhwIjoyMDQ3MDI1MjQ5fQ.RZuQaU5_ZXXCnRdZjZHUt3f-wWun7FxWQxbO_MZe1EI"
+    let userId = "7003713"
     let businessId = "1"
     let networkManager = NetworkManager.shared
     let timeZone = "Asia/Kolkata"
@@ -76,11 +76,11 @@ class ViewController: UIViewController {
         )
         let paymentDetails = PaymentGatewayDetails(
             methodName: "CRED UPI",
-            type: "card",
-            typeId: "1618" ,
+            type: "UPI",
+            typeId: "1754" ,
             viewType: "NON_METHOD",
-            gatewayId: "11",
-            category: ""
+            gatewayId: "1",
+            category: "UPI"
         )
         
         let generalDetails = GeneralDetails(
@@ -93,10 +93,23 @@ class ViewController: UIViewController {
         )
         
         let appDetails = AppDetails(appId: App_Id, bussinessId: businessId, version: version)
+        let fallBack = FallBackMethod(
+            icon: "",
+            viewType: "NON_METHOD",
+            isRecommended: false,
+            methodName: "Credit Card",
+            typeId: 1456,
+            id: 1,
+            type: "card",
+            gatewayId: 1
+        )
+        
+        let appUPIInfo = UPIInfo(fallBack: fallBack, isActive: true)
         
         let PaymentInfo = PaymentInfo(
             amoutDetails: amountDetails,
             paymentGateWayDetails: paymentDetails,
+            upiInfo: appUPIInfo,
             generalDetails: generalDetails,
             appDetails:appDetails
         )
