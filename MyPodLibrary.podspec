@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '13.0'
   s.requires_arc = true  # Ensure ARC is enabled
-  s.source_files = 'MyPodLibrary/Classes/**/*', 'PaymentManager/**/*', 'Models/**/*', 'NetworkManager/**/*', 'Extensions/**/*', 'Helpers/**/*', 'Payoneer/**/*', 'Payu/**/*'
+  s.source_files = 'PaymentManager/**/*', 'Models/**/*', 'NetworkManager/**/*', 'Extensions/**/*', 'Helpers/**/*', 'Payoneer/**/*', 'Payu/**/*'
   
 
   # s.resource_bundles = {

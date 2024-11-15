@@ -20,7 +20,6 @@
   },
   "requires_arc": true,
   "source_files": [
-    "MyPodLibrary/Classes/**/*",
     "PaymentManager/**/*",
     "Models/**/*",
     "NetworkManager/**/*",
